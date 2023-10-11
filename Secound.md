@@ -1,13 +1,13 @@
 ## Principle: Minimize Mutability
 
 ### Keeping Variables and Objects Immutable When Possible
-Using immutable variables and objects can make the code easier to reason about, as it avoids side effects and makes the code thread-safe
+Using immutable variables and objects can make the code easier to reason about, as it avoids side effects and makes the code thread-safe.
 
 ### Examples
 
 #### Example 1: Using Tuples Instead of Lists for Fixed Collections
 
-**Explanation**: Tuples are immutable and thus cannot be changed once they are created, which can help to ensure data consistency and safety in your code
+**Explanation**: Tuples are immutable and thus cannot be changed once they are created, which can help to ensure data consistency and safety in your code.
 
 ##### Bad
 ```python
@@ -29,7 +29,7 @@ coords = add_coordinate(coords, 1, 2)
 
 #### Example 2: Using Namedtuples or Data Classes for Structured Data
 
-**Explanation**: Utilizing `namedtuple` or `dataclass` (for more complex cases) helps to create immutable objects, which can be safer and often more memory-efficient than using mutable objects, like dictionaries or lists
+**Explanation**: Utilizing `namedtuple` or `dataclass` (for more complex cases) helps to create immutable objects, which can be safer and often more memory-efficient than using mutable objects, like dictionaries or lists.
 
 ##### Bad
 ```python
@@ -56,7 +56,7 @@ Evan = Person(name='Evan', age=30)
 
 #### Example 3: Avoiding Mutable Default Arguments in Functions
 
-**Explanation**: In Python, mutable default arguments in functions are evaluated once and retain changes between calls, potentially causing unexpected behavior and bugs
+**Explanation**: In Python, mutable default arguments in functions are evaluated once and retain changes between calls, potentially causing unexpected behavior and bugs.
 
 ##### Bad
 ```python
